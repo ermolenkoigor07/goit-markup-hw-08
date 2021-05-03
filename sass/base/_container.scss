@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  padding: 0 15px;
+
+  outline: 1px solid red;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    margin: 0 auto;
+    .footer & {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      padding-left: 76px;
+      padding-right: 89px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .footer & {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .header & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero & {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}

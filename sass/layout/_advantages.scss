@@ -1,0 +1,86 @@
+.advantages {
+  padding-top: calc(var(--section-padding-mobile) / 2);
+
+  @media screen and (min-width: 768px) {
+    padding-top: calc(var(--section-padding-tablet) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: calc(var(--section-padding-desktop) / 2);
+  }
+}
+
+.advantages-lists {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages-lists__item {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-child(-n + 2)) {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+      margin-bottom: 0;
+
+      &:not(:nth-child(4n)) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--button-font);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.icon-antenna {
+  &::before {
+    background-image: url('../images/advantages/antenna.svg');
+  }
+}
+
+.icon-clock {
+  &::before {
+    background-image: url('../images/advantages/clock.svg');
+  }
+}
+
+.icon-diagram {
+  &::before {
+    background-image: url('../images/advantages/diagram.svg');
+  }
+}
+
+.icon-astronaut {
+  &::before {
+    background-image: url('../images/advantages/astronaut.svg');
+  }
+}
+
+.advantages__third-title {
+  margin-bottom: 10px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
