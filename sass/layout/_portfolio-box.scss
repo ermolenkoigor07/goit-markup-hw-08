@@ -6,6 +6,7 @@
 }
 
 .portfolio-item-wrapper {
+  min-height: 145px;
   padding: 20px 24px;
   border: 1px solid var(--portfolio-border-color);
   border-top: none;
@@ -88,8 +89,6 @@
 }
 
 .portfolio-link {
-  outline: 1px solid red;
-
   //   position: relative;
   //   display: block;
   //   width: 100%;

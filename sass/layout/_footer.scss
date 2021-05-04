@@ -30,7 +30,10 @@
   width: 232px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .address__link {
@@ -43,9 +46,9 @@
 
   transition: color 250ms var(--transition-function);
 
-  //   &:not(:last-child) {
-  //     margin-bottom: 9px;
-  //   }
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 
   &:hover,
   &:focus {
@@ -92,9 +95,11 @@
 }
 
 .footer-form-wrapper {
-  max-width: 450px;
   margin-left: auto;
-  margin-right: auto;
+
+  @media scren and (max-width: 767px) {
+    max-width: 450px;
+  }
 
   @media screen and (min-width: 768px) {
     min-width: 450px;
@@ -159,6 +164,10 @@
   @media screen and (min-width: 1200px) {
     margin-left: 12px;
   }
+}
+
+.button__text {
+  margin-right: 10px;
 }
 
 // .footer {

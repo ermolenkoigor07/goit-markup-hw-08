@@ -129,6 +129,12 @@ body {
   padding-top: 118px;
   padding-bottom: 118px;
 }
+@media screen and (min-width: 1200px) {
+  .hero .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .logo {
   font-family: var(--secondary-font);
@@ -485,8 +491,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
@@ -575,8 +587,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 }
 
@@ -670,6 +680,14 @@ body {
 }
 
 .mobile-menu-wrapper {
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   top: 0;
   left: 50%;
@@ -697,7 +715,7 @@ body {
 }
 
 .mobile-menu {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -717,7 +735,7 @@ body {
   color: var(--accent-color);
 }
 
-.mobile-contacts {
+.mobile-contacts__list {
   margin-bottom: 64px;
 }
 
@@ -731,6 +749,10 @@ body {
 
 .mobile-contacts__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mobile-contacts__link--email {
+  color: var(--secondary-color);
 }
 
 .mobile-social {
@@ -775,38 +797,6 @@ body {
   }
 }
 
-.cont {
-  min-width: 300px;
-  height: 300px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.adaptive {
-  background-color: red;
-  max-width: 400px;
-}
-@media screen and (min-width: 458px) {
-  .adaptive {
-    max-width: 458px;
-  }
-}
-@media screen and (min-width: 800px) {
-  .adaptive {
-    max-width: 800px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .adaptive {
-    max-width: 1200px;
-  }
-}
-
-.responsive {
-  max-width: 1200px;
-  background-color: green;
-}
-
 .hero-bg-image {
   max-width: 480px;
   height: 400px;
@@ -827,6 +817,7 @@ body {
 @media screen and (min-width: 1200px) {
   .hero-bg-image {
     max-width: 100%;
+    height: 600px;
     background-color: var(--bg-color);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-bg-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-desktop.jpg);
@@ -846,6 +837,13 @@ body {
   text-transform: uppercase;
   color: var(--hero-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
 
 .hero__button {
   margin-right: auto;
@@ -853,16 +851,16 @@ body {
 }
 
 .advantages {
-  padding-top: calc(var(--section-padding-mobile) / 2);
+  padding-top: calc(var(--section-padding-mobile));
 }
 @media screen and (min-width: 768px) {
   .advantages {
-    padding-top: calc(var(--section-padding-tablet) / 2);
+    padding-top: calc(var(--section-padding-tablet));
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages {
-    padding-top: calc(var(--section-padding-desktop) / 2);
+    padding-top: calc(var(--section-padding-desktop));
   }
 }
 
@@ -981,7 +979,7 @@ body {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-lists__item {
     width: calc((100% - 30px) / 2);
   }
@@ -1052,14 +1050,20 @@ body {
   .clients-list__item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
+  .clients-list__item:nth-child(-n+4) {
+    margin-bottom: 30px;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients-list__item {
     -ms-flex-preferred-size: calc((100% - 60px) / 3);
         flex-basis: calc((100% - 60px) / 3);
   }
   .clients-list__item:not(:nth-child(3n)) {
     margin-right: 30px;
+  }
+  .clients-list__item:nth-child(-n+3) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1070,6 +1074,33 @@ body {
   .clients-list__item:not(:nth-child(6n)) {
     margin-right: 30px;
   }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}
+
+.clients-list__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--clients-border-color);
+  border-radius: 4px;
+  color: var(--clients-border-color);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-list__link:hover, .clients-list__link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .footer {
@@ -1103,7 +1134,11 @@ body {
   width: 232px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 60px;
+}
+@media screen and (max-width: 1199px) {
+  .address {
+    margin-bottom: 60px;
+  }
 }
 
 .address__link {
@@ -1114,6 +1149,9 @@ body {
   color: var(--footer-contacts-color);
   -webkit-transition: color 250ms var(--transition-function);
   transition: color 250ms var(--transition-function);
+}
+.address__link:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address__link:hover, .address__link:focus {
   color: var(--accent-color);
@@ -1155,9 +1193,12 @@ body {
 }
 
 .footer-form-wrapper {
-  max-width: 450px;
   margin-left: auto;
-  margin-right: auto;
+}
+@media scren and (max-width: 767px) {
+  .footer-form-wrapper {
+    max-width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-form-wrapper {
@@ -1223,4 +1264,8 @@ body {
   .footer__button {
     margin-left: 12px;
   }
+}
+
+.button__text {
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

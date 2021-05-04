@@ -67,33 +67,35 @@
                     <a class="mobile-menu__link link" href="1111.html">Контакты</a>
                 </li>
             </ul>
-            <ul class="mobile-contacts list">
-                <li class="mobile-contacts__item">
-                    <a class="mobile-contacts__link link" href="tel:+380961111111">
-                                 +38 096 111 11 11
-                    </a>
-                </li>
-                <li class="mobile-contacts__item">
-                    <a class="mobile-contacts__link link" href="mailto:info@devstudio.com">
-                        
-                        info@devstudio.com</a>
-                </li>
+            <div class="mobile-contacts">
+                <ul class="mobile-contacts__list list">
+                    <li class="mobile-contacts__item">
+                        <a class="mobile-contacts__link link" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a class="mobile-contacts__link mobile-contacts__link--email link" href="mailto:info@devstudio.com">
                 
-            </ul>
-            <ul class="mobile-social list">
-                <li class="mobile-social__list">
-                    <a class="mobile-social__link link" href="">Instagram</a>
-                </li>
-                <li class="mobile-social__list">
-                    <a class="mobile-social__link link" href="">Twitter</a>
-                </li>
-                <li class="mobile-social__list">
-                    <a class="mobile-social__link link" href="">Facebook</a>
-                </li>
-                <li class="mobile-social__list">
-                    <a class="mobile-social__link link" href="">LinkedIn</a>
-                </li>
-            </ul>
+                            info@devstudio.com</a>
+                    </li>
+                
+                </ul>
+                <ul class="mobile-social list">
+                    <li class="mobile-social__list">
+                        <a class="mobile-social__link link" href="">Instagram</a>
+                    </li>
+                    <li class="mobile-social__list">
+                        <a class="mobile-social__link link" href="">Twitter</a>
+                    </li>
+                    <li class="mobile-social__list">
+                        <a class="mobile-social__link link" href="">Facebook</a>
+                    </li>
+                    <li class="mobile-social__list">
+                        <a class="mobile-social__link link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
             <button type="button" class="header__close-btn" data-menu-close>
                 <svg class="icon-close">
                     <use href="./images/icons.svg#icon-close"></use>
@@ -523,7 +525,7 @@
                     <form class="footer-form" autocomplete="off">
                         <input type="text" class="footer-form-input" placeholder="E-mail">
                         <button class="button footer__button" type="submit">
-                            Подписаться
+                            <span class="button__text">Подписаться</span>
                             <svg class="button__icon" width="24px" height="24px">
                                 <use href="./images/icons.svg#icon-send"></use>
                             </svg>
